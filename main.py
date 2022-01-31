@@ -2,40 +2,12 @@ from cv2 import (
     VideoCapture, rectangle, putText, imshow,
     FONT_HERSHEY_TRIPLEX, waitKey, destroyAllWindows)
 from car_num_to_str import (
-    sozQiymat, sozlash, CarNumToStr)
+    CarNumToStr, yigibTekshir, sozQiymat, sozlash)
 
-__nmrlar = list()
-def yigibTekshir(text: str) -> str:
-    if text != '?': __nmrlar.append(text)
-    nmr_ln, aniq = len(__nmrlar), '?'
-    if nmr_ln >= 4:
-        for i in __nmrlar:
-            foiz = (__nmrlar.count(i) / nmr_ln) * 100
-            if foiz > 60:
-                if '6' in i[2:6]:
-                    if text[2].isalpha():
-                        a = [
-                            i[:3] +'0'+ i[4:], i[:4] +'0'+ i[5:], i[:5] +'0'+ i[6:],
-                            i[:3] +"00"+ i[5:], i[:4] +"00"+ i[6:], i[:3] +"000"+ i[6:]]
-                    else:
-                        a = [
-                            i[:2] +'0'+ i[3:], i[:3] +'0'+ i[4:], i[:4] +'0'+ i[5:],
-                            i[:2] +"00"+ i[4:], i[:3] +"00"+ i[5:], i[:2] +"000"+ i[5:]]
-                    for j in a:
-                        foiz = (__nmrlar.count(j) / nmr_ln) * 100
-                        if (j[2:6] != i[2:6]) and (foiz > 30):
-                            aniq = j
-                            break
-                    else: aniq = i
-                else: aniq = i
-                __nmrlar.clear()
-                break
-    if len(__nmrlar) == 8:
-        __nmrlar.clear()
-    return aniq
 
-kam = VideoCapture(0)
 oby = CarNumToStr(debug=True)
+kam = VideoCapture(0)
+waitKey(1000)
 eni, buyi = sozQiymat(kam.read()[1], yuza=500000)
 eni += 4
 
