@@ -5,6 +5,7 @@ from skimage.segmentation._clear_border import clear_border
 from pytesseract import image_to_string
 from math import sqrt
 from pandas.io.api import read_sql
+from os.path import dirname
 from numpy import ndarray
 
 def sozQiymat(img:ndarray=None, eni:int=None, buyi:int=None, yuza:int=100000) -> tuple[int,int]:
@@ -65,7 +66,8 @@ class CarNumToStr(object):
         super(CarNumToStr, self).__init__()
         self.__text, self.__cord = list(), list()
         self.__aniq, self.__debug = aniqlik, debug
-        self.__cascade = CascadeClassifier("haarcascade_russian_plate_number.xml")
+        cas_path = dirname(__file__).replace("\\", '/') + "/haarcascade_russian_plate_number.xml"
+        self.__cascade = CascadeClassifier(cas_path)
     
     def __moshinaRaqami(self, img:ndarray) -> list:
         crp_list = list()
