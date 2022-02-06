@@ -71,7 +71,7 @@ class CarNumToStr(object):
     
     def __moshinaRaqami(self, img:ndarray) -> list:
         crp_list = list()
-        plates = self.__cascade.detectMultiScale(img, scaleFactor=1.2, minNeighbors=4)
+        plates = self.__cascade.detectMultiScale(img)
         for (x,y,w,h) in plates:
             if w*h >= 8000:
                 x2, y2 = x+w, y+h
