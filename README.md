@@ -1,7 +1,11 @@
 ## ushbu dastur mashina raqamini aniqlab uni yozuvga aylantiradi
 ishga tushirish uchun qo'shimcha kutubxonalar o'rnatish kerak
 
---------------------
+### kerakli kutubxonalarni o'rnatish uchun
+```
+pip install numpy opencv-python scikit-image pandas
+```
+
 * o'rnatish qiyinroq bo'lgan kutubxona - `pytesseract`
 
 avvalo kompyuterga
@@ -10,8 +14,7 @@ ni o'rnatish kerak
 
 keyin `C:\Program Files\Tesseract-OCR` manzilni kompyuter `path` iga qo'shish kerak
 
-va cmd ga 
+va `pytesseract` ni o'rnatish uchun
 ```
 pip install pytesseract
 ```
-komandasini berish kerak
