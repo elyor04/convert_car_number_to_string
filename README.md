@@ -1,4 +1,4 @@
-# ushbu dastur mashina raqamini aniqlab uni yozuvga aylantiradi
+## ushbu dastur mashina raqamini aniqlab uni yozuvga aylantiradi
 ishga tushirish uchun qo'shimcha kutubxonalar o'rnatish kerak
 
 --------------------
