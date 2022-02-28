@@ -2,7 +2,7 @@
 ishga tushirish uchun qo'shimcha kutubxonalar o'rnatish kerak
 
 --------------------
-### o'rnatish qiyinroq bo'lgan kutubxona - `pytesseract`
+#### o'rnatish qiyinroq bo'lgan kutubxona - `pytesseract`
 
 avvalo kompyuterga
 [Tesseract-OCR](https://www.softpedia.com/get/Programming/Other-Programming-Files/Tesseract-OCR.shtml)
