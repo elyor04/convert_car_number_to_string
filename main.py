@@ -4,7 +4,6 @@ from cv2 import (
 from car_num_to_str import (
     CarNumToStr, yigibTekshir, sozQiymat, sozlash)
 
-
 oby = CarNumToStr(debug=True)
 kam = VideoCapture(0)
 waitKey(1000)
