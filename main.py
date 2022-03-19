@@ -7,7 +7,12 @@ from cv2 import (
     waitKey,
     destroyAllWindows,
 )
-from car_num_to_str import CarNumToStr, yigibTekshir, sozQiymat, sozlash
+from car_num_to_str import (
+    CarNumToStr,
+    yigibTekshir,
+    sozQiymat,
+    sozlash,
+)
 
 oby = CarNumToStr(debug=True)
 kam = VideoCapture(0)
